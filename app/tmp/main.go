@@ -38,7 +38,7 @@ func main() {
 				Args: []*revel.MethodArg{ 
 				},
 				RenderArgNames: map[int][]string{ 
-					16: []string{ 
+					17: []string{ 
 						"message",
 					},
 				},
@@ -49,7 +49,7 @@ func main() {
 					&revel.MethodArg{Name: "myName", Type: reflect.TypeOf((*string)(nil)) },
 				},
 				RenderArgNames: map[int][]string{ 
-					29: []string{ 
+					30: []string{ 
 						"myName",
 					},
 				},
@@ -57,6 +57,16 @@ func main() {
 			&revel.MethodType{
 				Name: "GetAllUser",
 				Args: []*revel.MethodArg{ 
+				},
+				RenderArgNames: map[int][]string{ 
+				},
+			},
+			&revel.MethodType{
+				Name: "InsertUser",
+				Args: []*revel.MethodArg{ 
+					&revel.MethodArg{Name: "name", Type: reflect.TypeOf((*string)(nil)) },
+					&revel.MethodArg{Name: "email", Type: reflect.TypeOf((*string)(nil)) },
+					&revel.MethodArg{Name: "password", Type: reflect.TypeOf((*string)(nil)) },
 				},
 				RenderArgNames: map[int][]string{ 
 				},
@@ -181,8 +191,15 @@ func main() {
 	
 	revel.DefaultValidationKeys = map[string]map[int]string{ 
 		"ahmadarif/go-revel/app/controllers.App.Hello": { 
-			20: "myName",
 			21: "myName",
+			22: "myName",
+		},
+		"ahmadarif/go-revel/app/controllers.App.InsertUser": { 
+			40: "name",
+			41: "name",
+			42: "email",
+			43: "email",
+			44: "password",
 		},
 	}
 	testing.TestSuites = []interface{}{ 

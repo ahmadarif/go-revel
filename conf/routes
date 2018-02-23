@@ -9,7 +9,8 @@ module:testrunner
 
 GET     /                                       App.Index
 GET     /app/hello                              App.Hello
-GET     /app/users                              App.GetAllUser
+GET     /api/users                              App.GetAllUser
+GET     /api/users/save                         App.InsertUser
 
 # Ignore favicon requests
 GET     /favicon.ico                            404
