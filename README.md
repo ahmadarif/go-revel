@@ -2,14 +2,30 @@
 
 A high-productivity web framework for the [Go language](http://www.golang.org/).
 
+### Install dependency using dep
+```
+dep ensure
+```
+
+### Install dependency using dep
+```
+dep ensure -add package-name
+```
 
 ### Start the web server:
-
-   revel run myapp
+```
+revel run ahmadarif/go-revel
+```
 
 ### Go to http://localhost:9000/ and you'll see:
+```
+"It works"
+```
 
-    "It works"
+### Build the app
+```
+revel build ahmadarif/go-revel /path/to/build/folder
+```
 
 ## Code Layout
 
