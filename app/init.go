@@ -38,10 +38,10 @@ func init() {
 	// ( order dependent )
 	// revel.OnAppStart(ExampleStartupScript)
 	// revel.OnAppStart(FillCache)
-	revel.OnAppStart(InitDB)
+	revel.OnAppStart(initDB)
 }
 
-func InitDB() {
+func initDB() {
 	gorm.InitDB()
 	gorm.DB.AutoMigrate(&models.User{})
 }
